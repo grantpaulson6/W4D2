@@ -44,12 +44,11 @@ class CatsController < ApplicationController
   end
 
   def destroy
-    @cat = Cat.find_by(id: params[:id])
-    fail
-    if @cat.destroy(cat_params)
+    
+    if Cat.destroy(params[:id])
       redirect_to cats_url
     else
-      render :show 
+      render :index 
     end
   end
 
