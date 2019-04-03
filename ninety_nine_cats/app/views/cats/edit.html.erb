@@ -1,0 +1,6 @@
+
+<%= render 'form', cat: @cat, method: :edit %>
+<br>
+<form action="<%=cat_url(@cat)%>" method="post"></form>
+<input type="hidden" name="_method" value="destroy">
+<input type="submit" value="KILL THE CAT!!!!">
